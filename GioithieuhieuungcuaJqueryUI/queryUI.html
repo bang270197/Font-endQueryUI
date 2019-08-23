@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Draggable - Default functionality</title>
+
+
+<!--  bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+<!--  css  -->
+<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+<div class="row">
+    <div class="col-3">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <!--Draggable-->
+            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-Draggable" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                Draggable()
+            </a>
+            <!--Droppable-->
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-Droppable" role="tab" aria-controls="v-pills-profile" aria-selected="false">Droppable()</a>
+            <!--Resizable-->
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-Resizable" role="tab" aria-controls="v-pills-messages" aria-selected="false">Resizable()</a>
+            <!--Selectable-->
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-Selectable" role="tab" aria-controls="v-pills-settings" aria-selected="false">Selectable()</a>
+            <!--Sortable-->
+            <a class="nav-link" id="v-pills-Sortable-tab" data-toggle="pill" href="#v-pills-Sortable" role="tab" aria-controls="v-pills-settings" aria-selected="false">Sortable()</a>
+
+        </div>
+    </div>
+    <div class="col-9">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-Draggable" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                <h4>Draggable</h4>
+                <hr>
+                <div id="draggable" class="ui-widget-content">
+                    <p>Drag me around</p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-Droppable" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                <h4>Droppable</h4>
+                <hr>
+                <div id="draggable1" class="ui-widget-content">
+                    <p>Drag me to my target</p>
+                </div>
+
+                <div id="droppable" class="ui-widget-header">
+                    <p>Drop here</p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-Resizable" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <h4>Resizable</h4>
+                <hr>
+                <div id="resizable" class="ui-widget-content">
+                    <h3 class="ui-widget-header">Resizable</h3>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-Selectable" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                <h4>Selectable</h4>
+                <hr>
+                <ol id="selectable">
+                    <li class="ui-widget-content">Item 1</li>
+                    <li class="ui-widget-content">Item 2</li>
+                    <li class="ui-widget-content">Item 3</li>
+                    <li class="ui-widget-content">Item 4</li>
+                    <li class="ui-widget-content">Item 5</li>
+                    <li class="ui-widget-content">Item 6</li>
+                    <li class="ui-widget-content">Item 7</li>
+                </ol>
+            </div>
+            <div class="tab-pane fade" id="v-pills-Sortable" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                <h4>Sortable</h4>
+                <hr>
+                <ul id="sortable">
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/js.js" ></script>
+</body>
+</html>
